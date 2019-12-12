@@ -11,3 +11,5 @@ Use the **lfw_far_thresholding.py** to determine the similarity threshold betwee
 Then run the **dataset_adjacency_build.py** to save the image pair similarity information in csv files, which will then be used in **dataset_cleaner.py** to build the graphs and do small community cleaning.
 
 A small tool is provided to move original images to a separate folder according to the clean data list.
+
+A first version of cleaned VGGFace2 training and testing image lists can be downloaded at [Google Drive](https://drive.google.com/open?id=1rHKzmeWCaiJ34HViWU2XvYnpbBKulHdO)
