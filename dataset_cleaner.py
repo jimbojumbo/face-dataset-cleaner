@@ -106,7 +106,15 @@ def cli(graph_info_dir, cleaned_lists_dir, threshold, p):
         class_name = file_name.stem
 
         df = pd.read_csv(
-            file_name, header=0, names=['ID', 'file1', 'file2', 'score'])
+            file_name,
+            header=0,
+            names=['ID', 'file1', 'file2', 'score'],
+            dtype={
+                'ID': str,
+                'file1': str,
+                'file2': str,
+                'score': np.float32,
+            })
 
         image_names = df.file1.unique().tolist()
         target_names = df.file2.unique().tolist()
